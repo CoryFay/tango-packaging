@@ -1,0 +1,18 @@
+body {
+    background: black;
+}
+
+#testBtn {
+    position: relative;
+    left: 30%;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#empty-div {
+    background: border-box tan;
+    margin: 25px 15px 25px 15px;
+    padding: 50px;
+    text-align: center;
+}
