@@ -2,6 +2,17 @@ body {
     background: rgb(233, 217, 196);
 }
 
+h1{
+    color: black;
+    text-align: center;
+}
+
+p {
+    color: black;
+    margin-left: 10px;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
 
 .submitBtn {
     position: relative;
