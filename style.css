@@ -1,18 +1,18 @@
 body {
-    background: black;
+    background: rgb(233, 217, 196);
 }
 
-#testBtn {
+.header {
+  padding: 25px;
+}
+
+.submitBtn {
     position: relative;
-    left: 30%;
-    text-align: center;
+    left: 43%;
     margin-top: 50px;
-    padding: 20px;
 }
 
-#empty-div {
-    background: border-box tan;
-    margin: 25px 15px 25px 15px;
-    padding: 50px;
-    text-align: center;
+.row {
+    position: relative;
+    right: 25px;
 }
