@@ -1,22 +1,55 @@
-body {
-    background: rgb(233, 217, 196);
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body { 
+    box-sizing: content-box;
+    margin-top: .5px;
+    background: whitesmoke;
+}
+
+header {
+    border: solid rgb(7, 40, 85) 5px;
+    text-align: left;
+    position: relative;
+    padding: 25px;
+    right: 30px;
+    margin-top: 0px;
+    background-color: brown;
+    width: 100%;
+}
+
+img {
+    border: solid rgb(7, 40, 85) 5px;
+    height: 35%;
+    width: 30%;
 }
 
 h1{
-    color: black;
+    border: solid rgb(7, 40, 85) 5px;
+    background:rgb(233, 217, 196);
+    margin: 1px 50px 0px 0px;
+    padding: 25px;
+    font-size: 75px;
+    float: left;
+    color:  rgb(7, 40, 85);
     text-align: center;
 }
 
 p {
+    clear: both;
     color: black;
     margin-left: 10px;
     font-size: 24px;
     margin-bottom: 5px;
 }
 
+.row {
+    text-align: center;
+}
+
 .submitBtn {
     position: relative;
-    left: 43%;
     margin-top: 50px;
 }
 
