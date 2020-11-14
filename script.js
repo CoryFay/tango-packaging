@@ -13,6 +13,7 @@ $('#partialNo').on('click', function(){
 $('.submitBtn').click(function(){
     event.preventDefault();
     
+    
 });
 
 });

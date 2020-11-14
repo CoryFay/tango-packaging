@@ -47,17 +47,18 @@ p {
 
 .row {
     margin-left: 30px;
+    text-align: left;
+    /* position: relative;
+    right: 25px;
+ */}
+
+ .btnCont {
     text-align: center;
-}
+ }
 
 .submitBtn {
     position: relative;
     margin-top: 50px;
-}
-
-.row {
-    position: relative;
-    right: 25px;
 }
 
 .hide {
