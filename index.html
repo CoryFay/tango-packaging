@@ -26,8 +26,8 @@
                 <label for="billContactName">Bill to: Contact Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="billPhoneNum" type="text" class="validate">
-                <label for="billPhoneNum">Bill to: Phone Number</label>
+                <input id="billPhoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="validate">
+                <label for="billPhoneNum">Bill to: Phone Number (Format: 123-456-7890)</label>
             </div>
             <div class="input-field col s6">
                 <input id="billStreet1" type="text" class="validate">
