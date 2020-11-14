@@ -12,7 +12,7 @@ header {
     text-align: left;
     /* padding: 25px; */
     right: 30px;
-    margin: 1px 3px 20px 3px;
+    margin: 1px 3px 100px 3px;
     background-color: brown;
     width: 100%;
 }
@@ -54,12 +54,13 @@ p {
 
  .btnCont {
     text-align: center;
+    margin-bottom: 0px;
  }
 
-.submitBtn {
+/* .submitBtn {
     position: relative;
-    margin-top: 50px;
-}
+    
+} */
 
 .hide {
     display: none;

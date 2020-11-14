@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pallet Label</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha256-c9vxcXyAG4paArQG3xk6DjyW/9aHxai2ef9RpMWO44A=" crossorigin="anonymous"></script>
@@ -11,12 +13,15 @@
 <style>
 body {
     background-color: antiquewhite;
-    }
+}
 .container {
+    position: relative;
+    left: -3%;
     background-color: white;
     width: 600px;
     margin: 40px;
     padding: 50px;
+    text-align: left;
 }    
 .head {
     text-align: center;
@@ -25,12 +30,20 @@ body {
 .tango-logo {
     max-width: 120px;
 }
+.PO{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.button{
+    text-align: center;
+}
 h1 {
     font-size: 16px;
     font-weight: 100;
 }
 h2 {
     font-size: 18px;
+    font-weight: bold;
 }
 p {
     font-size: 16px;
@@ -42,30 +55,32 @@ p {
     <div class="container" id="content2">
         <div class="head">
                 <img src="https://static1.squarespace.com/static/5dc192e53319296ac54915bb/t/5dc193f24c3dd609f315c12d/1604692339364/?format=1500w" alt="tango logo" class="tango-logo">
-                <h1>Quality Assurance Inspection Report</h1>
-            </div>
+        </div>
             <br>
-            <div>
-                <h2>Tango Packaging</h2>
-                <p>29115 Avenue Valley View</p>
-                <p>Vendor: Dase-Sing</p>
-                <p>Valencia, CA 91355</p>
-                <p>Packaging PO: 007430</p>
-                <p>503.806.1700</p>
-                <p>Manufactured Date: <span id="special-date">05/20/2020</span></p>
-            </div>
-            <br>
-            <div>
-                <h2 class="company">COMAPNY:</h2>
-                <p id="client-address">Intermountain Blending & Filming</p>
-                <p>Customer PO: 4500070420</p>
-                <p>2601 E. Commercial Street</p>
-                <p>Order Date: 04/10/2020</p>
-                <p>Meridan, ID 93642</p>
-            </div>
+        <div class="row">
+        <div class="col s12">
+        <div class="shipTo col s6">
+            <h2>Ship To:</h2>
+            <p>Scentsy, Inc.</p>
+            <p>3001 East Commercial St.</p>
+            <p>Meridian, ID. 83642</p>
+            <p>208.472.0695</p>
+            <p class="PO">PO # 4500076147</p>
+        </div>
+        <div class="shipFrom col s6">
+            <h2>Ship From:</h2>
+            <p>Tango Packaging</p>
+            <p>29115 Avenue Valley View</p>
+            <p>Valencia, CA. 91355</p>
+            <p>503.806.1700</p>
+            <p class="PO">PO # 007430</p>
+        </div>
+        </div>
+        </div>
     </div>
+    <div class="button">
     <button class="btn btn-info" id="downloadPDF">Download PDF</button>
-
+    </div>
     <script>
             /*
 $('#cmd2').click(function() {
