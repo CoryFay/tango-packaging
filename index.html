@@ -147,6 +147,39 @@
                 <label for="itemSize">Item Size: </label>
             </div>
             <div class="input-field col s6">
+                <input id="layFlat" type="text" class="validate">
+                <label for="layFlat">Layflat (always in mm): </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="cutLength" type="text" class="validate">
+                <label for="cutLength">If Cut Bands, then: Cut Length (mm) </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="rollLength" type="text" class="validate">
+                <label for="rollLength">If Tubing, then: Roll Length (mm) </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="impLength" type="text" class="validate">
+                <label for="impLength">If Tubing, then optional: Impression Length (mm) </label>
+            </div>
+                <p>If Tubing, then: Is there a partial roll?</p>
+                <p>
+                    <label>
+                      <input id="yesPartialRoll"name="fullorpartial" type="radio" />
+                      <span>Yes</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                      <input id="noPartialRoll" name="fullorpartial" type="radio" />
+                      <span>No</span>
+                    </label>
+                </p>
+            <div class="input-field col s6">
+                <input id="pRollLength" type="text" class="validate">
+                <label for="pRollLength">If Yes, then: Partial Roll Length</label>
+            </div>
+            <div class="input-field col s6">
                 <input id="quantOrdered" type="text" class="validate">
                 <label for="quantOrdered">Quantity Ordered: </label>
             </div>
