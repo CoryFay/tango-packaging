@@ -57,3 +57,7 @@ p {
     position: relative;
     right: 25px;
 }
+
+.hide {
+    display: none;
+}
