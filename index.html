@@ -26,8 +26,8 @@
                 <label for="billContactName">Bill to: Contact Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="billPhoneNum" type="text" class="validate">
-                <label for="billPhoneNum">Bill to: Phone Number</label>
+                <input id="billPhoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="validate">
+                <label for="billPhoneNum">Bill to: Phone Number (Format: 123-456-7890)</label>
             </div>
             <div class="input-field col s6">
                 <input id="billStreet1" type="text" class="validate">
@@ -58,7 +58,7 @@
                 <label for="shipContactName">Ship to: Contact Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="shipPhoneNum" type="text" class="validate">
+                <input id="shipPhoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="validate">
                 <label for="shipPhoneNum">Ship to: Phone Number</label>
             </div>
             <div class="input-field col s6">
@@ -203,7 +203,8 @@
         </form>
         <!-- when btn is clicked it will open 'PalletLabel.html & QualityAssurance.hmtl' in a new tab -->
         <div class="btnCont">
-            <button onClick="window.open('QualityAssurance.html'); window.open('PalletLabel.html');">Submit</button>
+            <button class='submitBtn'>Submit</button>
+            <!-- <button onClick="window.open('QualityAssurance.html'); window.open('PalletLabel.html');">Submit</button> -->
         </div>
     </div>
 </div>
