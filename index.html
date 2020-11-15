@@ -164,18 +164,18 @@
             </div>
                 <p>If Tubing, then: Is there a partial roll?</p>
                 <p>
-                    <label>
-                      <input id="yesPartialRoll"name="fullorpartial" type="radio" />
+                    <label label="yesPartialRoll">
+                      <input id="yesPartialRoll" name="fullorpartial" type="radio" />
                       <span>Yes</span>
                     </label>
                 </p>
                 <p>
-                    <label>
+                    <label for="noPartialRoll">
                       <input id="noPartialRoll" name="fullorpartial" type="radio" />
                       <span>No</span>
                     </label>
                 </p>
-            <div class="input-field col s6">
+            <div id="hiddenPartialRoll" class="hide input-field col s6">
                 <input id="pRollLength" type="text" class="validate">
                 <label for="pRollLength">If Yes, then: Partial Roll Length</label>
             </div>
