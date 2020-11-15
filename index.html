@@ -59,7 +59,7 @@
             </div>
             <div class="input-field col s6">
                 <input id="shipPhoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="validate">
-                <label for="shipPhoneNum">Ship to: Phone Number</label>
+                <label for="shipPhoneNum">Ship to: Phone Number (Format: 123-456-7890)</label>
             </div>
             <div class="input-field col s6">
                 <input id="shipStreet1" type="text" class="validate">
@@ -135,12 +135,49 @@
                 </label>
               </p>
             <div class="input-field col s12">
+                <input id="totalRolls" type="text" class="validate">
+                <label for="totalRolls">(if Tubing) Total # of rolls </label>
+            </div>
+              <div class="input-field col s12">
                 <input id="itemDescription" type="text" class="validate">
                 <label for="itemDescription">Item Description: </label>
             </div>
             <div class="input-field col s12">
                 <input id="itemSize" type="text" class="validate">
                 <label for="itemSize">Item Size: </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="layFlat" type="text" class="validate">
+                <label for="layFlat">Layflat (always in mm): </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="cutLength" type="text" class="validate">
+                <label for="cutLength">If Cut Bands, then: Cut Length (mm) </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="rollLength" type="text" class="validate">
+                <label for="rollLength">If Tubing, then: Roll Length (mm) </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="impLength" type="text" class="validate">
+                <label for="impLength">If Tubing, then optional: Impression Length (mm) </label>
+            </div>
+                <p>If Tubing, then: Is there a partial roll?</p>
+                <p>
+                    <label label="yesPartialRoll">
+                      <input id="yesPartialRoll" name="fullorpartial" type="radio" />
+                      <span>Yes</span>
+                    </label>
+                </p>
+                <p>
+                    <label for="noPartialRoll">
+                      <input id="noPartialRoll" name="fullorpartial" type="radio" />
+                      <span>No</span>
+                    </label>
+                </p>
+            <div id="hiddenPartialRoll" class="hide input-field col s6">
+                <input id="pRollLength" type="text" class="validate">
+                <label for="pRollLength">If Yes, then: Partial Roll Length</label>
             </div>
             <div class="input-field col s6">
                 <input id="quantOrdered" type="text" class="validate">
