@@ -15,6 +15,16 @@ $(document).ready(function () {
         $('#hiddenPartialBox').addClass('hide');
     });
 
+    $('#yesPartialRoll').on('click', function () {
+        event.preventDefault();
+        $('#hiddenPartialRoll').removeClass('hide');
+    });
+
+    $('#noPartialRoll').on('click', function () {
+        event.preventDefault();
+        $('#hiddenPartialRoll').addClass('hide');
+    });
+
     $('.submitBtn').click(function () {
         event.preventDefault();
         var companyData = {
