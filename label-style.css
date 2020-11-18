@@ -286,6 +286,10 @@ body {
   margin: 0px;
   padding: 0px;
 }
+#pallet-label .lastPO{
+  font-size: 40px;
+  font-weight: bolder;
+}
 #pallet-label th, #pallet-label td {
   height: auto;
   width: 25%;

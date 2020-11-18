@@ -44,6 +44,7 @@ $(document).ready(function () {
                     label.text(inputLabels[k]);
                     label.attr('for', 'inp' + (k + 1));
                     div.append(label);
+                    console.log(inputLabels.length);
                 //} //else if (k === 5){
                 //     var p2 = $('<p>');
                 //     p2.text(inputLabels[k]);
