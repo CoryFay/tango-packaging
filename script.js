@@ -126,8 +126,12 @@ $(document).ready(function () {
             totalWeight: $('#totalWeight').val(),
             tangoPackagingPONum: $('#tangoPackagingPONum').val(),
         }
+
+        //Trying to store old object data
+        // if (dataStorage !== null){
         // var existing = localStorage.getItem('companyList');
-        // dataStorage.push(existing);
+        // dataStorage.push(JSON.parse(existing));
+        // };
         dataStorage.push(companyData);
         localStorage.setItem('companyList', JSON.stringify(dataStorage));
         console.log(dataStorage);
