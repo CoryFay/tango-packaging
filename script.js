@@ -138,8 +138,28 @@ $(document).ready(function () {
             shipMethod: $('#shipMethod').val(),
             fob: $('#fob').val(),
             numOfItems: $('#numOfItems').val(),
+            tangoItemNum: $('#inp1').val(),
+            custItemNum: $('#inp2').val(),
+            bandsTubing: $('#inp3').val(),
+            totalRolls: $('#inp4').val(),
+            itemDescription: $('#inp5').val(),
+            itemSize: $('#inp6').val(),
+            layFlat: $("#inp7").val(),
+            cutLength: $('#inp8').val(),
+            rollLength: $('#inp9').val(),
+            impLength: $('#inp10').val(),
+            partialRoll: $('#inp11').val(),
+            partialRollLength: $('#inp12').val(),
+            quantOrdered: $('#inp13').val(),
+            totalQuantShipped: $('#inp14').val(),
+            quantPerCarton: $('#inp15').val(),
+            numTotalCarton: $('#inp16').val(),
+            partialBox: $('#inp17').val(),
+            quantPartialBox: $('#inp18').val(),
+            vendorSupplierName: $('#inp19').val(),
             totalWeight: $('#totalWeight').val(),
             tangoPackagingPONum: $('#tangoPackagingPONum').val(),
+
         }
 
         //Trying to store old object data
