@@ -26,8 +26,8 @@
                 <label for="billContactName">Bill to: Contact Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="billPhoneNum" type="text" class="validate">
-                <label for="billPhoneNum">Bill to: Phone Number</label>
+                <input id="billPhoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="validate">
+                <label for="billPhoneNum">Bill to: Phone Number (Format: 123-456-7890)</label>
             </div>
             <div class="input-field col s6">
                 <input id="billStreet1" type="text" class="validate">
@@ -49,6 +49,19 @@
                 <input id="billZip" type="text" class="validate">
                 <label for="billZip">Bill to: Zip</label>
             </div>
+            <p>Is 'Ship to' = 'Bill to'?</p>
+            <p>
+                <label>
+                  <input id="shipSameBillYes"name="shipSameBill" type="radio" />
+                  <span>Yes</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input id="shipSameBillNo" name="shipSameBill" type="radio" />
+                  <span>No</span>
+                </label>
+              </p>
             <div class="input-field col s6">
                 <input id="shipCompName" type="text" class="validate">
                 <label for="shipCompName">Ship to: Company Name </label>
@@ -58,8 +71,8 @@
                 <label for="shipContactName">Ship to: Contact Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="shipPhoneNum" type="text" class="validate">
-                <label for="shipPhoneNum">Ship to: Phone Number</label>
+                <input id="shipPhoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="validate">
+                <label for="shipPhoneNum">Ship to: Phone Number (Format: 123-456-7890)</label>
             </div>
             <div class="input-field col s6">
                 <input id="shipStreet1" type="text" class="validate">
@@ -82,11 +95,11 @@
                 <label for="shipZip">Ship to: Zip</label>
             </div>
             <div class="input-field col s12">
-                <input id="shipDate" type="text" class="validate">
+                <input id="shipDate" type="date" class="validate">
                 <label for="shipDate">Shipping Date: </label>
             </div>
             <div class="input-field col s12">
-                <input id="manuDate" type="text" class="validate">
+                <input id="manuDate" type="date" class="validate">
                 <label for="manuDate">Manufactured Date: </label>
             </div>
             <div class="input-field col s12">
@@ -94,7 +107,7 @@
                 <label for="custPO">Customer PO #: </label>
             </div>
             <div class="input-field col s12">
-                <input id="custPODate" type="text" class="validate">
+                <input id="custPODate" type="date" class="validate">
                 <label for="custPODate">Customer PO Date: </label>
             </div>
             <div class="input-field col s12">
@@ -102,14 +115,16 @@
                 <label for="shipMethod">Shipping Method: </label>
             </div>
             <div class="input-field col s12">
-                <input id="shipTerms" type="text" class="validate">
-                <label for="shipTerms">Shipping Terms: </label>
+                <input id="fob" type="text" class="validate">
+                <label for="fob">F.O.B:</label>
             </div>
             <div class="input-field col s12">
                 <input id="numOfItems" type="text" class="validate">
-                <label for="numOfItems">Number of Items: </label>
+                <label for="numOfItems">Number of Items:</label>
+                <button class='enterData'>Enter</button>
             </div>
-            <div class="input-field col s6">
+            <div class="emptyDiv"></div>
+            <!-- <div class="input-field col s6">
                 <input id="tangoItemNum" type="text" class="validate">
                 <label for="tangoItemNum">Tango Item #: </label>
             </div>
@@ -117,13 +132,9 @@
                 <input id="custItemNum" type="text" class="validate">
                 <label for="custItemNum">Customer Item #: </label>
             </div>
-            <!-- <div class="input-field col s12">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Cut bands or tubing? </label>
-            </div> -->
             <p>Cut bands or tubing?</p>
-            <p>
-                <label>
+            <p> -->
+                <!-- <label>
                   <input id="cutBand"name="cutOrTube" type="radio" />
                   <span>Cut bands</span>
                 </label>
@@ -135,12 +146,50 @@
                 </label>
               </p>
             <div class="input-field col s12">
+                <input id="totalRolls" type="text" class="validate">
+                <label for="totalRolls">(if Tubing) Total # of rolls </label>
+            </div>
+              <div class="input-field col s12">
                 <input id="itemDescription" type="text" class="validate">
                 <label for="itemDescription">Item Description: </label>
             </div>
-            <div class="input-field col s12">
+             <div class="input-field col s12">
                 <input id="itemSize" type="text" class="validate">
                 <label for="itemSize">Item Size: </label>
+            </div> -->
+            <!-- <p>Item Size:</p>
+            <div class="input-field col s6">
+                <input id="layFlat" type="text" class="validate">
+                <label for="layFlat">Layflat (always in mm): </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="cutLength" type="text" class="validate">
+                <label for="cutLength">If Cut Bands, then: Cut Length (mm) </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="rollLength" type="text" class="validate">
+                <label for="rollLength">If Tubing, then: Roll Length (mm) </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="impLength" type="text" class="validate">
+                <label for="impLength">If Tubing, then optional: Impression Length (mm) </label>
+            </div>
+                <p>If Tubing, then: Is there a partial roll?</p>
+                <p>
+                    <label label="yesPartialRoll">
+                      <input id="yesPartialRoll" name="fullorpartial" type="radio" />
+                      <span>Yes</span>
+                    </label>
+                </p>
+                <p>
+                    <label for="noPartialRoll">
+                      <input id="noPartialRoll" name="fullorpartial" type="radio" />
+                      <span>No</span>
+                    </label> -->
+                <!-- </p>
+            <div id="hiddenPartialRoll" class="hide input-field col s6">
+                <input id="pRollLength" type="text" class="validate">
+                <label for="pRollLength">If Yes, then: Partial Roll Length</label>
             </div>
             <div class="input-field col s6">
                 <input id="quantOrdered" type="text" class="validate">
@@ -157,12 +206,12 @@
             <div class="input-field col s6">
                 <input id="numTotalCarton" type="text" class="validate">
                 <label for="numTotalCarton">Number of Total Cartons: </label>
-            </div>
+            </div> -->
             <!-- <div class="input-field col s12">
                 <input id="last_name" type="text" class="validate">
                 <label for="last_name">Is there a partial box? </label>
             </div> -->
-            <p>Is there a partial box?</p>
+            <!-- <p>Is there a partial box?</p>
             <p>
                 <label>
                   <input id="partialYes" name="partialBox" type="radio" />
@@ -174,24 +223,16 @@
                   <input id="partialNo" name="partialBox" type="radio" />
                   <span>No</span>
                 </label>
-              </p>
+              </p> -->
               <!-- hidden until selected otherwise -->
-              <div id="hiddenPartialBox" class="hide input-field col s12">
+              <!-- <div id="hiddenPartialBox" class="hide input-field col s12">
                 <input id="quantPartialBox" type="text" class="validate">
                 <label for="quantPartialBox">Quantity in Partial Box: </label>
-            </div>
-            <div class="input-field col s12">
-                <input id="unitOfMeasure" type="text" class="validate">
-                <label for="unitOfMeasure">Unit of Measure: </label>
-            </div>
-            <div class="input-field col s12">
-                <input id="cartonCount" type="text" class="validate">
-                <label for="cartonCount">Carton Count: </label>
-            </div>
-            <div class="input-field col s12">
+            </div> -->
+            <!-- <div class="input-field col s12">
                 <input id="vendorSupplierName" type="text" class="validate">
                 <label for="vendorSupplierName">Vendor/Supplier Name: </label>
-            </div>
+            </div> -->
             <div class="input-field col s12">
                 <input id="totalWeight" type="text" class="validate">
                 <label for="totalWeight">Total Weight of Order: </label>
@@ -201,9 +242,10 @@
                 <label for="tangoPackagingPONum">Tango Packaging P0 #: </label>
             </div>
         </form>
-        <!-- when btn is clicked it will open 'test.html' in a new tab -->
-        <div class="btnCont">
-            <button onClick="window.open('QualityAssurance.html'); window.open('PalletLabel.html');">Submit</button>
+        <div class="btnCont col s12">
+        <!-- when btn is clicked it will open 'PalletLabel.html & QualityAssurance.hmtl' in a new tab -->
+            <!-- <button class='submitBtn'>Submit</button> -->
+            <button class='submitBtn' onClick="window.open('QualityAssurance.html'); window.open('PalletLabel.html');">Submit</button>
         </div>
     </div>
 </div>
