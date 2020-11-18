@@ -32,7 +32,6 @@ $(document).ready(function () {
             $('.items').append(p);
             var newDiv = $('<div>');
             newDiv.attr('id', 'item'+i);
-            //newDiv.addClass('input-field col s6');
             $('.items').append(newDiv);
             
             for (var k = 0; k < inputLabels.length; k++) {
@@ -43,11 +42,11 @@ $(document).ready(function () {
                     var inp = $('<input>');
                     inp.addClass('validate');
                     inp.attr('type', 'text');
-                    inp.attr('id', i + 'inp' +(k+1));
+                    inp.attr('id', 'inp' +(k+1));
                     div.append(inp);
                     var label = $('<label>');
                     label.text(inputLabels[k]);
-                    label.attr('for', i + 'inp' + (k+1));
+                    label.attr('for', 'inp' + (k+1));
                     div.append(label);
                     //console.log(inputLabels.length);
                 //} //else if (k === 5){
