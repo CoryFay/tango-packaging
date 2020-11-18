@@ -40,3 +40,24 @@ rollTangoItemNum.innerText = obj[0].tangoItemNum;
 rollItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
 rollQuantity.innerText = obj[0].rollLength + " Meters";
 rollDate.innerText = obj[0].shipDate;
+
+// CARTON LABEL
+var cartonCustomerAddressName = $('#lc-address').children('li')[0];
+var cartonCustomerAddressStreet = $('#lc-address').children('li')[1];
+var cartonCustomerAddressCity = $('#lc-address').children('li')[2];
+var cartonCustomerAddressPO = $('#lc-PO').children('td')[1];
+var cartonItemDescription = $('#lc-description').children('td')[1];
+var cartonTangoItemNum = $('#lc-tangoItemNum').children('td')[1];
+var cartonItemSize = $('#lc-itemSize').children('td')[1];
+var cartonQuantity = $('#lc-quantity').children('td')[1];
+var cartonDate = $('#lc-date').children('td')[1];
+
+cartonCustomerAddressName.innerText = obj[0].billCompName;
+cartonCustomerAddressStreet.innerText = obj[0].billStreet1;
+cartonCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState + ', ' + obj[0].billZip;
+cartonCustomerAddressPO.innerText = obj[0].custPO;
+cartonItemDescription.innerText = obj[0].itemDescription;
+cartonTangoItemNum.innerText = obj[0].tangoItemNum;
+cartonItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
+cartonQuantity.innerText = obj[0].rollLength + " Meters";
+cartonDate.innerText = obj[0].shipDate;
