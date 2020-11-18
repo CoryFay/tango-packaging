@@ -8,6 +8,19 @@ $(document).ready(function () {
         '(If Tubing) Total # of rolls:',
         'Item Description:',
         'Item Size:',
+        'Layflat (always in mm)',
+        'If Cut Bands, then: Cut Length (mm)',
+        'If Tubing, then: Roll Length (mm)',
+        'If Tubing, then optional: Impression Length (mm)',
+        'If Tubing, then: Is there a partial roll?',
+        'If Yes, then: Partial Roll Length',
+        'Quantity Ordered:',
+        'Total Quantity Shipped:',
+        'Quantity per Carton:',
+        'Number of Total Cartons:',
+        'Is there a partial box?',
+        'Quantity in Partial Box:',
+        'Vendor/Supplier Name:'
     ];
 
     $('.enterData').click(function () {
@@ -18,7 +31,7 @@ $(document).ready(function () {
             p.text('Item ' + i);
             $('.emptyDiv').append(p);
             for (var k = 0; k < inputLabels.length; k++) {
-                if (k === 0 ||k === 1 ||k === 3 ||k === 4) {
+                //if (k === 0 ||k === 1 ||k === 2 ||k === 3 ||k === 4) {
                     var div = $('<div>');
                     div.addClass('input-field col s6 divCont' + (k + 1));
                     $('.emptyDiv').append(div);
@@ -31,31 +44,33 @@ $(document).ready(function () {
                     label.text(inputLabels[k]);
                     label.attr('for', 'inp' + (k + 1));
                     div.append(label);
-                } else if (k === 5){
-                    var p2 = $('<p>');
-                    p2.text(inputLabels[k]);
-                    $('.emptyDiv').append(p2);
-                } else if (k === 2){
-                    var p3 = $('<p>');
-                    p3.text(inputLabels[k]);
-                    $('.emptyDiv').append(p3);
-                    var p4 = $('<p>');
-                    p4.attr('id', 'p4');
-                    var label4 = $('<label>');
-                    //label4.attr('id', 'l4');
-                    label4.attr('for', 'cutBand');
-                    var inp4 = $('<input>');
-                    inp4.attr('id', 'cutBand');
-                    inp4.attr('name', 'cutOrTube');
-                    inp4.attr('type', 'radio');
-                    var span4 = $('<span>');
-                    span4.text('Cut Bands');
-                    inp4.html(span4);
-                    label4.append(inp4);
-                    p4.append(label4);
+                //} //else if (k === 5){
+                //     var p2 = $('<p>');
+                //     p2.text(inputLabels[k]);
+                //     $('.emptyDiv').append(p2);
+                // }
+                
+                //else if (k === 2){
+                    // var p3 = $('<p>');
+                    // p3.text(inputLabels[k]);
+                    // $('.emptyDiv').append(p3);
+                    // var p4 = $('<p>');
+                    // p4.attr('id', 'p4');
+                    // var label4 = $('<label>');
+                    // //label4.attr('id', 'l4');
+                    // label4.attr('for', 'cutBand');
+                    // var inp4 = $('<input>');
+                    // inp4.attr('id', 'cutBand');
+                    // inp4.attr('name', 'cutOrTube');
+                    // inp4.attr('type', 'radio');
+                    // var span4 = $('<span>');
+                    // span4.text('Cut Bands');
+                    // inp4.html(span4);
+                    // label4.append(inp4);
+                    // p4.append(label4);
                 }
             };
-        };
+        //};
     });
 
     // PDF API 
