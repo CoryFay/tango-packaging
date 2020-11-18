@@ -7,7 +7,6 @@ console.log(input)
 
 
 
-
 var palletCustomerAddressName = $('#pallet-customer-address').children('li')[0];
 var palletCustomerAddressStreet = $('#pallet-customer-address').children('li')[1];
 var palletCustomerAddressCity = $('#pallet-customer-address').children('li')[2];
