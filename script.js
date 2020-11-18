@@ -160,8 +160,7 @@ $(document).ready(function () {
             vendorSupplierName: $('#inp19').val(),
             totalWeight: $('#totalWeight').val(),
             tangoPackagingPONum: $('#tangoPackagingPONum').val(),
-
-        }
+        };
 
         //Trying to store old object data
         // if (dataStorage !== null){
