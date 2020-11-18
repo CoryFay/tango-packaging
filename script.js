@@ -29,22 +29,27 @@ $(document).ready(function () {
         for (var i = 1; i <= numItemsInput; i++) {
             var p = $('<p>');
             p.text('Item ' + i);
-            $('.emptyDiv').append(p);
+            $('.items').append(p);
+            var newDiv = $('<div>');
+            newDiv.attr('id', 'item'+i);
+            //newDiv.addClass('input-field col s6');
+            $('.items').append(newDiv);
+            
             for (var k = 0; k < inputLabels.length; k++) {
                 //if (k === 0 ||k === 1 ||k === 2 ||k === 3 ||k === 4) {
                     var div = $('<div>');
                     div.addClass('input-field col s6 divCont' + (k + 1));
-                    $('.emptyDiv').append(div);
+                    $('#item'+i).append(div);
                     var inp = $('<input>');
                     inp.addClass('validate');
                     inp.attr('type', 'text');
-                    inp.attr('id', 'inp' + (k + 1));
+                    inp.attr('id', i + 'inp' +(k+1));
                     div.append(inp);
                     var label = $('<label>');
                     label.text(inputLabels[k]);
-                    label.attr('for', 'inp' + (k + 1));
+                    label.attr('for', i + 'inp' + (k+1));
                     div.append(label);
-                    console.log(inputLabels.length);
+                    //console.log(inputLabels.length);
                 //} //else if (k === 5){
                 //     var p2 = $('<p>');
                 //     p2.text(inputLabels[k]);
@@ -89,25 +94,26 @@ $(document).ready(function () {
     });
 
     // START 'if yes, displays hidden fields'
-    $('#partialYes').on('click', function () {
-        event.preventDefault();
-        $('#hiddenPartialBox').removeClass('hide');
-    });
+    // BELOW --- Not Used In MVP
+    // $('#partialYes').on('click', function () {
+    //     event.preventDefault();
+    //     $('#hiddenPartialBox').removeClass('hide');
+    // });
 
-    $('#partialNo').on('click', function () {
-        event.preventDefault();
-        $('#hiddenPartialBox').addClass('hide');
-    });
+    // $('#partialNo').on('click', function () {
+    //     event.preventDefault();
+    //     $('#hiddenPartialBox').addClass('hide');
+    // });
 
-    $('#yesPartialRoll').on('click', function () {
-        event.preventDefault();
-        $('#hiddenPartialRoll').removeClass('hide');
-    });
+    // $('#yesPartialRoll').on('click', function () {
+    //     event.preventDefault();
+    //     $('#hiddenPartialRoll').removeClass('hide');
+    // });
 
-    $('#noPartialRoll').on('click', function () {
-        event.preventDefault();
-        $('#hiddenPartialRoll').addClass('hide');
-    });
+    // $('#noPartialRoll').on('click', function () {
+    //     event.preventDefault();
+    //     $('#hiddenPartialRoll').addClass('hide');
+    // });
     // END 'if yes, displays hidden fields'
 
     var dataStorage = [];
