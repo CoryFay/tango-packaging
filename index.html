@@ -49,6 +49,19 @@
                 <input id="billZip" type="text" class="validate">
                 <label for="billZip">Bill to: Zip</label>
             </div>
+            <p>Is 'Ship to' = 'Bill to'?</p>
+            <p>
+                <label>
+                  <input id="shipSameBillYes"name="shipSameBill" type="radio" />
+                  <span>Yes</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input id="shipSameBillNo" name="shipSameBill" type="radio" />
+                  <span>No</span>
+                </label>
+              </p>
             <div class="input-field col s6">
                 <input id="shipCompName" type="text" class="validate">
                 <label for="shipCompName">Ship to: Company Name </label>
@@ -102,14 +115,16 @@
                 <label for="shipMethod">Shipping Method: </label>
             </div>
             <div class="input-field col s12">
-                <input id="shipTerms" type="text" class="validate">
-                <label for="shipTerms">Shipping Terms: </label>
+                <input id="fob" type="text" class="validate">
+                <label for="fob">F.O.B:</label>
             </div>
             <div class="input-field col s12">
                 <input id="numOfItems" type="text" class="validate">
-                <label for="numOfItems">Number of Items: </label>
+                <label for="numOfItems">Number of Items:</label>
+                <button class='enterData'>Enter</button>
             </div>
-            <div class="input-field col s6">
+            <div class="emptyDiv"></div>
+            <!-- <div class="input-field col s6">
                 <input id="tangoItemNum" type="text" class="validate">
                 <label for="tangoItemNum">Tango Item #: </label>
             </div>
@@ -117,13 +132,9 @@
                 <input id="custItemNum" type="text" class="validate">
                 <label for="custItemNum">Customer Item #: </label>
             </div>
-            <!-- <div class="input-field col s12">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Cut bands or tubing? </label>
-            </div> -->
             <p>Cut bands or tubing?</p>
-            <p>
-                <label>
+            <p> -->
+                <!-- <label>
                   <input id="cutBand"name="cutOrTube" type="radio" />
                   <span>Cut bands</span>
                 </label>
@@ -142,10 +153,11 @@
                 <input id="itemDescription" type="text" class="validate">
                 <label for="itemDescription">Item Description: </label>
             </div>
-            <div class="input-field col s12">
+             <div class="input-field col s12">
                 <input id="itemSize" type="text" class="validate">
                 <label for="itemSize">Item Size: </label>
-            </div>
+            </div> -->
+            <!-- <p>Item Size:</p>
             <div class="input-field col s6">
                 <input id="layFlat" type="text" class="validate">
                 <label for="layFlat">Layflat (always in mm): </label>
@@ -173,8 +185,8 @@
                     <label for="noPartialRoll">
                       <input id="noPartialRoll" name="fullorpartial" type="radio" />
                       <span>No</span>
-                    </label>
-                </p>
+                    </label> -->
+                <!-- </p>
             <div id="hiddenPartialRoll" class="hide input-field col s6">
                 <input id="pRollLength" type="text" class="validate">
                 <label for="pRollLength">If Yes, then: Partial Roll Length</label>
@@ -194,12 +206,12 @@
             <div class="input-field col s6">
                 <input id="numTotalCarton" type="text" class="validate">
                 <label for="numTotalCarton">Number of Total Cartons: </label>
-            </div>
+            </div> -->
             <!-- <div class="input-field col s12">
                 <input id="last_name" type="text" class="validate">
                 <label for="last_name">Is there a partial box? </label>
             </div> -->
-            <p>Is there a partial box?</p>
+            <!-- <p>Is there a partial box?</p>
             <p>
                 <label>
                   <input id="partialYes" name="partialBox" type="radio" />
@@ -211,24 +223,16 @@
                   <input id="partialNo" name="partialBox" type="radio" />
                   <span>No</span>
                 </label>
-              </p>
+              </p> -->
               <!-- hidden until selected otherwise -->
-              <div id="hiddenPartialBox" class="hide input-field col s12">
+              <!-- <div id="hiddenPartialBox" class="hide input-field col s12">
                 <input id="quantPartialBox" type="text" class="validate">
                 <label for="quantPartialBox">Quantity in Partial Box: </label>
-            </div>
-            <div class="input-field col s12">
-                <input id="unitOfMeasure" type="text" class="validate">
-                <label for="unitOfMeasure">Unit of Measure: </label>
-            </div>
-            <div class="input-field col s12">
-                <input id="cartonCount" type="text" class="validate">
-                <label for="cartonCount">Carton Count: </label>
-            </div>
-            <div class="input-field col s12">
+            </div> -->
+            <!-- <div class="input-field col s12">
                 <input id="vendorSupplierName" type="text" class="validate">
                 <label for="vendorSupplierName">Vendor/Supplier Name: </label>
-            </div>
+            </div> -->
             <div class="input-field col s12">
                 <input id="totalWeight" type="text" class="validate">
                 <label for="totalWeight">Total Weight of Order: </label>
@@ -238,10 +242,8 @@
                 <label for="tangoPackagingPONum">Tango Packaging P0 #: </label>
             </div>
         </form>
-        <!-- when btn is clicked it will open 'test.html' in a new tab -->
         <div class="btnCont col s12">
         <!-- when btn is clicked it will open 'PalletLabel.html & QualityAssurance.hmtl' in a new tab -->
-        <div class="btnCont">
             <!-- <button class='submitBtn'>Submit</button> -->
             <button class='submitBtn' onClick="window.open('QualityAssurance.html'); window.open('PalletLabel.html');">Submit</button>
         </div>
