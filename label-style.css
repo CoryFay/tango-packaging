@@ -145,6 +145,9 @@ section {
   
   max-width: 200px;
 }
+#qa-description{
+  font-weight: bolder;
+}
 .qa-header {
   text-align: center;
 }

@@ -1,13 +1,33 @@
 var input = window.localStorage.getItem('companyList');
 var obj = JSON.parse(input)
 console.log(obj)
+// PACKING LIST
 
 
+// INSPECTION REPORT
+var qualAssuranceShipDate = $('#qa-date').children('span')[0];
+var qualAssuranceVendor = $('#qa-tangoInfo').children('li')[4];
+var qualAssuranceManuDate = $('#qa-tangoInfo').children('li')[5];
+var qualAssuranceName = $('#qa-customerInfo').children('li')[0];
+var qualAssuranceAddress = $('#qa-customerInfo').children('li')[1];
+var qualAssuranceCity = $('#qa-customerInfo').children('li')[2];
+var qualAssurancePO = $('#qa-customerInfo').children('li')[3];
+var qualAssuranceDateOrdered = $('#qa-customerInfo').children('li')[4];
+var qualAssuranceDescription = $('#qa-description').children('li')[0];
+var qualAssuranceDescriptionSize = $('#qa-description').children('li')[1];
 
+qualAssuranceShipDate.innerText = obj[0].shipDate;
+qualAssuranceVendor.innerText = 'Vendor: ' + obj[0].vendorSupplierName;
+qualAssuranceManuDate.innerText = 'Manufactured Date: ' + obj[0].manuDate;
+qualAssuranceName.innerText = obj[0].billCompName;
+qualAssuranceAddress.innerText = obj[0].billStreet1;
+qualAssuranceCity.innerText = obj[0].billCity + ', ' + obj[0].billState + ', ' + obj[0].billZip;
+qualAssurancePO.innerText = 'Customer PO #: ' + obj[0].custPO;
+qualAssuranceDateOrdered.innerText = 'Date Ordered: ' + obj[0].custPODate;
+qualAssuranceDescription.innerText = obj[0].itemDescription;
+qualAssuranceDescriptionSize.innerText = 'Size: ' + obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
 
-
-
-
+// PALLET LABEL
 var palletCustomerAddressName = $('#pallet-customer-address').children('li')[0];
 var palletCustomerAddressStreet = $('#pallet-customer-address').children('li')[1];
 var palletCustomerAddressCity = $('#pallet-customer-address').children('li')[2];
@@ -20,12 +40,49 @@ palletCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState 
 palletCustomerAddressPhone.innerText = obj[0].billPhoneNum;
 palletCustomerAddressPO.innerText = 'PO #: ' + obj[0].custPO;
 
-<<<<<<< HEAD
+// ROLL LABEL
+var rollCustomerAddressName = $('#lr-address').children('li')[0];
+var rollCustomerAddressStreet = $('#lr-address').children('li')[1];
+var rollCustomerAddressCity = $('#lr-address').children('li')[2];
+var rollCustomerAddressPO = $('#lr-PO').children('td')[1];
+var rollItemDescription = $('#lr-description').children('td')[1];
+var rollTangoItemNum = $('#lr-tangoItemNum').children('td')[1];
+var rollItemSize = $('#lr-itemSize').children('td')[1];
+var rollQuantity = $('#lr-quantity').children('td')[1];
+var rollDate = $('#lr-date').children('td')[1];
 
+rollCustomerAddressName.innerText = obj[0].billCompName;
+rollCustomerAddressStreet.innerText = obj[0].billStreet1;
+rollCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState + ', ' + obj[0].billZip;
+rollCustomerAddressPO.innerText = obj[0].custPO;
+rollItemDescription.innerText = obj[0].itemDescription;
+rollTangoItemNum.innerText = obj[0].tangoItemNum;
+rollItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
+rollQuantity.innerText = obj[0].rollLength + " Meters";
+rollDate.innerText = obj[0].shipDate;
 
+// CARTON LABEL
+var cartonCustomerAddressName = $('#lc-address').children('li')[0];
+var cartonCustomerAddressStreet = $('#lc-address').children('li')[1];
+var cartonCustomerAddressCity = $('#lc-address').children('li')[2];
+var cartonCustomerAddressPO = $('#lc-PO').children('td')[1];
+var cartonItemDescription = $('#lc-description').children('td')[1];
+var cartonTangoItemNum = $('#lc-tangoItemNum').children('td')[1];
+var cartonItemSize = $('#lc-itemSize').children('td')[1];
+var cartonQuantity = $('#lc-quantity').children('td')[1];
+var cartonDate = $('#lc-date').children('td')[1];
 
+cartonCustomerAddressName.innerText = obj[0].billCompName;
+cartonCustomerAddressStreet.innerText = obj[0].billStreet1;
+cartonCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState + ', ' + obj[0].billZip;
+cartonCustomerAddressPO.innerText = obj[0].custPO;
+cartonItemDescription.innerText = obj[0].itemDescription;
+cartonTangoItemNum.innerText = obj[0].tangoItemNum;
+cartonItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
+cartonQuantity.innerText = obj[0].rollLength + " Meters";
+cartonDate.innerText = obj[0].shipDate;
 
-
+// CONVERT TO PDF API
 $('#download-packing-list-PDF').click(function () {
 
     domtoimage.toPng(document.getElementById('packing-list'))
@@ -90,46 +147,4 @@ $('#download-pallet-label-PDF').click(function () {
 
 
 
-=======
-// ROLL LABEL
-var rollCustomerAddressName = $('#lr-address').children('li')[0];
-var rollCustomerAddressStreet = $('#lr-address').children('li')[1];
-var rollCustomerAddressCity = $('#lr-address').children('li')[2];
-var rollCustomerAddressPO = $('#lr-PO').children('td')[1];
-var rollItemDescription = $('#lr-description').children('td')[1];
-var rollTangoItemNum = $('#lr-tangoItemNum').children('td')[1];
-var rollItemSize = $('#lr-itemSize').children('td')[1];
-var rollQuantity = $('#lr-quantity').children('td')[1];
-var rollDate = $('#lr-date').children('td')[1];
 
-rollCustomerAddressName.innerText = obj[0].billCompName;
-rollCustomerAddressStreet.innerText = obj[0].billStreet1;
-rollCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState + ', ' + obj[0].billZip;
-rollCustomerAddressPO.innerText = obj[0].custPO;
-rollItemDescription.innerText = obj[0].itemDescription;
-rollTangoItemNum.innerText = obj[0].tangoItemNum;
-rollItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
-rollQuantity.innerText = obj[0].rollLength + " Meters";
-rollDate.innerText = obj[0].shipDate;
-
-// CARTON LABEL
-var cartonCustomerAddressName = $('#lc-address').children('li')[0];
-var cartonCustomerAddressStreet = $('#lc-address').children('li')[1];
-var cartonCustomerAddressCity = $('#lc-address').children('li')[2];
-var cartonCustomerAddressPO = $('#lc-PO').children('td')[1];
-var cartonItemDescription = $('#lc-description').children('td')[1];
-var cartonTangoItemNum = $('#lc-tangoItemNum').children('td')[1];
-var cartonItemSize = $('#lc-itemSize').children('td')[1];
-var cartonQuantity = $('#lc-quantity').children('td')[1];
-var cartonDate = $('#lc-date').children('td')[1];
-
-cartonCustomerAddressName.innerText = obj[0].billCompName;
-cartonCustomerAddressStreet.innerText = obj[0].billStreet1;
-cartonCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState + ', ' + obj[0].billZip;
-cartonCustomerAddressPO.innerText = obj[0].custPO;
-cartonItemDescription.innerText = obj[0].itemDescription;
-cartonTangoItemNum.innerText = obj[0].tangoItemNum;
-cartonItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
-cartonQuantity.innerText = obj[0].rollLength + " Meters";
-cartonDate.innerText = obj[0].shipDate;
->>>>>>> main
