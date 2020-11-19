@@ -2,7 +2,45 @@ var input = window.localStorage.getItem('companyList');
 var obj = JSON.parse(input)
 console.log(obj)
 // PACKING LIST
+var packingListShipDate = $('#packing-list-invoice').children('li')[2];
+var packingListShipMethod = $('#packing-list-invoice').children('li')[3];
+var packingListFOB = $('#packing-list-invoice').children('li')[4];
+var packingListBillToName = $('#packing-list-billto').children('li')[0];
+var packingListBillToAddress = $('#packing-list-billto').children('li')[1];
+var packingListBillToCity = $('#packing-list-billto').children('li')[2];
+var packingListBillToPhone = $('#packing-list-billto').children('li')[3];
+var packingListShipToName = $('#packing-list-shipto').children('li')[0];
+var packingListShipToAddress = $('#packing-list-shipto').children('li')[1];
+var packingListShipToCity = $('#packing-list-shipto').children('li')[2];
+var packingListShipToPhone = $('#packing-list-shipto').children('li')[3];
+var packingListItemNum = $('#pl-itemNum')[0];
+var packingListDescription = $('#pl-description').children('li')[0];
+var packingListItemSize = $('#pl-description').children('li')[1];
+var packingListOrdered = $('#packing-list-item1').children('td')[2];
+var packingListShipped = $('#packing-list-item1').children('td')[3];
+var packingListBoxCount = $('#packing-list-item1').children('td')[6];
+var packingListWeight = $('.weight').children('h4')[0];
+var packingListFooterPO = $('#pl-footer').children('li')[0];
 
+packingListShipDate.innerText = obj[0].shipDate;
+packingListShipMethod.innerText = obj[0].shipMethod;
+packingListFOB.innerText = obj[0].fob;
+packingListBillToName.innerText = obj[0].billCompName;
+packingListBillToAddress.innerText = obj[0].billStreet1;
+packingListBillToCity.innerText = obj[0].billCity + ', ' + obj[0].billState + ', ' + obj[0].billZip;
+packingListBillToPhone.innerText = obj[0].billPhoneNum;
+packingListShipToName.innerText = obj[0].shipCompName;
+packingListShipToAddress.innerText = obj[0].shipStreet1;
+packingListShipToCity.innerText = obj[0].shipCity + ', ' + obj[0].shipState + ', ' + obj[0].shipZip;
+packingListShipToPhone.innerText = obj[0].shipPhoneNum;
+packingListItemNum.innerText = obj[0].tangoItemNum;
+packingListDescription.innerText = obj[0].itemDescription;
+packingListItemSize.innerText = 'Size: ' + obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
+packingListOrdered.innerText = obj[0].quantOrdered;
+packingListShipped.innerText = obj[0].totalQuantShipped;
+packingListBoxCount.innerText = obj[0].numTotalCarton;
+packingListWeight.innerText = 'Weight: ' + obj[0].totalWeight + ' lbs';
+packingListFooterPO.innerText = 'Reference PO# ' + obj[0].custPO;
 
 // INSPECTION REPORT
 var qualAssuranceShipDate = $('#qa-date').children('span')[0];
