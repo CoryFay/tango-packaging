@@ -48,8 +48,6 @@ section {
 
 
 
-
-
 /* PACKING LIST */
 
 
@@ -58,8 +56,9 @@ section {
   padding: 40px;
   background-color: white;
 }
-.logo {
-  margin: 0px 0px -260px 40px;
+#packing-list .logo {
+  margin: 0px 0px -230px 40px;
+  max-width: 200px;
 }
 #packing-list ul {
   list-style-type: none;
@@ -141,6 +140,10 @@ section {
   padding: 40px;
   background-color: white;
   font-family: 'Times New Roman', Times, serif;
+}
+#quality-assurance .logo {
+  
+  max-width: 200px;
 }
 .qa-header {
   text-align: center;
@@ -320,8 +323,9 @@ section {
   height: 8.5in;
   background-color: white;
 }
-#pallet-label img {
-  margin: 40px 0px -120px 40px
+#pallet-label .logo {
+  margin: 40px 0px -120px 40px;
+  max-width: 200px;;
 }
 #pallet-label table {
   width: 10in;
