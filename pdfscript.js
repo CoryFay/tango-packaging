@@ -20,7 +20,6 @@ palletCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState 
 palletCustomerAddressPhone.innerText = obj[0].billPhoneNum;
 palletCustomerAddressPO.innerText = 'PO #: ' + obj[0].custPO;
 
-<<<<<<< HEAD
 
 
 
@@ -90,7 +89,6 @@ $('#download-pallet-label-PDF').click(function () {
 
 
 
-=======
 // ROLL LABEL
 var rollCustomerAddressName = $('#lr-address').children('li')[0];
 var rollCustomerAddressStreet = $('#lr-address').children('li')[1];
@@ -132,4 +130,3 @@ cartonTangoItemNum.innerText = obj[0].tangoItemNum;
 cartonItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
 cartonQuantity.innerText = obj[0].rollLength + " Meters";
 cartonDate.innerText = obj[0].shipDate;
->>>>>>> main
