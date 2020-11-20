@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
 
     <!--external and internal links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
     <header class="header">
-    <img src="https://static1.squarespace.com/static/5dc192e53319296ac54915bb/t/5dc193f24c3dd609f315c12d/1604692339364/?format=1500w" alt="tango logo" class="tango-logo">
-    <h1>Label Maker</h1>
+        <img src="https://static1.squarespace.com/static/5dc192e53319296ac54915bb/t/5dc193f24c3dd609f315c12d/1604692339364/?format=1500w"
+            alt="tango logo" class="tango-logo">
+        <h1>Label Maker</h1>
     </header>
     <div class="row">
         <form class="col s12">
@@ -52,16 +55,16 @@
             <p>Is 'Ship to' = 'Bill to'?</p>
             <p>
                 <label>
-                  <input id="shipSameBillYes"name="shipSameBill" type="radio" />
-                  <span>Yes</span>
+                    <input id="shipSameBillYes" name="shipSameBill" type="radio" />
+                    <span>Yes</span>
                 </label>
-              </p>
-              <p>
+            </p>
+            <p>
                 <label>
-                  <input id="shipSameBillNo" name="shipSameBill" type="radio" />
-                  <span>No</span>
+                    <input id="shipSameBillNo" name="shipSameBill" type="radio" />
+                    <span>No</span>
                 </label>
-              </p>
+            </p>
             <div class="input-field col s6">
                 <input id="shipCompName" type="text" class="validate">
                 <label for="shipCompName">Ship to: Company Name </label>
@@ -124,115 +127,6 @@
                 <button class='enterData'>Enter</button>
             </div>
             <div class="items"></div>
-            <!-- <div class="input-field col s6">
-                <input id="tangoItemNum" type="text" class="validate">
-                <label for="tangoItemNum">Tango Item #: </label>
-            </div>
-            <div class="input-field col s6">
-                <input id="custItemNum" type="text" class="validate">
-                <label for="custItemNum">Customer Item #: </label>
-            </div>
-            <p>Cut bands or tubing?</p>
-            <p> -->
-                <!-- <label>
-                  <input id="cutBand"name="cutOrTube" type="radio" />
-                  <span>Cut bands</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input id="tubing" name="cutOrTube" type="radio" />
-                  <span>Tubing</span>
-                </label>
-              </p>
-            <div class="input-field col s12">
-                <input id="totalRolls" type="text" class="validate">
-                <label for="totalRolls">(if Tubing) Total # of rolls </label>
-            </div>
-              <div class="input-field col s12">
-                <input id="itemDescription" type="text" class="validate">
-                <label for="itemDescription">Item Description: </label>
-            </div>
-             <div class="input-field col s12">
-                <input id="itemSize" type="text" class="validate">
-                <label for="itemSize">Item Size: </label>
-            </div> -->
-            <!-- <p>Item Size:</p>
-            <div class="input-field col s6">
-                <input id="layFlat" type="text" class="validate">
-                <label for="layFlat">Layflat (always in mm): </label>
-            </div>
-            <div class="input-field col s6">
-                <input id="cutLength" type="text" class="validate">
-                <label for="cutLength">If Cut Bands, then: Cut Length (mm) </label>
-            </div>
-            <div class="input-field col s6">
-                <input id="rollLength" type="text" class="validate">
-                <label for="rollLength">If Tubing, then: Roll Length (mm) </label>
-            </div>
-            <div class="input-field col s6">
-                <input id="impLength" type="text" class="validate">
-                <label for="impLength">If Tubing, then optional: Impression Length (mm) </label>
-            </div>
-                <p>If Tubing, then: Is there a partial roll?</p>
-                <p>
-                    <label label="yesPartialRoll">
-                      <input id="yesPartialRoll" name="fullorpartial" type="radio" />
-                      <span>Yes</span>
-                    </label>
-                </p>
-                <p>
-                    <label for="noPartialRoll">
-                      <input id="noPartialRoll" name="fullorpartial" type="radio" />
-                      <span>No</span>
-                    </label> -->
-                <!-- </p>
-            <div id="hiddenPartialRoll" class="hide input-field col s6">
-                <input id="pRollLength" type="text" class="validate">
-                <label for="pRollLength">If Yes, then: Partial Roll Length</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="quantOrdered" type="text" class="validate">
-                <label for="quantOrdered">Quantity Ordered: </label>
-            </div>
-            <div class="input-field col s6">
-                <input id="totalQuantShipped" type="text" class="validate">
-                <label for="totalQuantShipped">Total Quantity Shipped: </label>
-            </div>
-            <div class="input-field col s6">
-                <input id="quantPerCarton" type="text" class="validate">
-                <label for="quantPerCarton">Quantity per Carton: </label>
-            </div>
-            <div class="input-field col s6">
-                <input id="numTotalCarton" type="text" class="validate">
-                <label for="numTotalCarton">Number of Total Cartons: </label>
-            </div> -->
-            <!-- <div class="input-field col s12">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Is there a partial box? </label>
-            </div> -->
-            <!-- <p>Is there a partial box?</p>
-            <p>
-                <label>
-                  <input id="partialYes" name="partialBox" type="radio" />
-                  <span>Yes</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input id="partialNo" name="partialBox" type="radio" />
-                  <span>No</span>
-                </label>
-              </p> -->
-              <!-- hidden until selected otherwise -->
-              <!-- <div id="hiddenPartialBox" class="hide input-field col s12">
-                <input id="quantPartialBox" type="text" class="validate">
-                <label for="quantPartialBox">Quantity in Partial Box: </label>
-            </div> -->
-            <!-- <div class="input-field col s12">
-                <input id="vendorSupplierName" type="text" class="validate">
-                <label for="vendorSupplierName">Vendor/Supplier Name: </label>
-            </div> -->
             <div class="input-field col s12">
                 <input id="totalWeight" type="text" class="validate">
                 <label for="totalWeight">Total Weight of Order: </label>
@@ -243,17 +137,16 @@
             </div>
         </form>
         <div class="btnCont col s12">
-        <!-- when btn is clicked it will open 'PalletLabel.html & QualityAssurance.hmtl' in a new tab -->
-            
-    
+            <!-- THESE TWO BUTTONS FUNCTION TO SAVE DATA AND TAKE USER TO A SEPERATE PAGE -->
             <button class='submitBtn'>Submit Info</button>
-            <button class='submitBtn' onClick="window.open('preview.html');">View PDFs</button>
-           
+            <button class='viewBtn' onClick="window.open('preview.html');">View PDFs</button>
         </div>
     </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
