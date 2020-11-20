@@ -4,14 +4,17 @@
 
 This repository contains a web application that allows the user (Tango-Packaging employees) to generate shipping label PDFs based off of the values inputed in the form on the webpage.  This method of label generation takes the load off of Tango-Packaging employees who had to generate the forms manually up until the inception of this application.  The application was created using HTML to display the form elements and styled using the CSS framework materializecss.  Javascript was also incorporated to add on-click functionality to the buttons on the webpage and for the proper utilization of PDF generation APIs.  
 
-Link to deployed application here: [Tango-Packaging Labels]()
+Link to deployed application here: [Tango-Packaging Label Generator](https://coryfay.github.io/tango-packaging/)
 
 ### Usage
 
+To use this application, simply input the appropriate values into the input fields and submit this form data with the "submit info" button.  Then, click the "view PDFs" button to open a separate webpage with the generated PDFs and clicking the "download PDf" button will download the selected PDF 
 
 ![Alt Text](url)
 
 ### Credits
+
+
 
 ### License
 
