@@ -20,10 +20,10 @@ To use this application, simply input the appropriate values into the input fiel
 
 Thank you to the following contributors for their work on this repository
 
-[Cory Fay](https://github.com/CoryFay)
-[Joe Giampaoli](https://github.com/joe-zu)
-[Armando Contreras](https://github.com/alxndrnevermando)
-[Ryan Petrecca](https://github.com/ryryp97)
+* [Cory Fay](https://github.com/CoryFay)
+* [Joe Giampaoli](https://github.com/joe-zu)
+* [Armando Contreras](https://github.com/alxndrnevermando)
+* [Ryan Petrecca](https://github.com/ryryp97)
 
 
 
