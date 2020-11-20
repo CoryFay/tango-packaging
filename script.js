@@ -49,7 +49,6 @@ $(document).ready(function () {
             };
         };
     });
-
     // CONVERT INPUTS TO JSON AND PUSH TO  var dataStorage/SAVE TO LOCAL STORAGE
     var dataStorage = [];
     $('.submitBtn').click(function () {
