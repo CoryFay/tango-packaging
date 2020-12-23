@@ -1,6 +1,9 @@
 var input = window.localStorage.getItem('companyList');
 var obj = JSON.parse(input)
 console.log(obj)
+
+// THIS IS WHERE WE MANIPULATE PREVIEW.HTML WITH THE VALUES FROM OUR INPUTS ON INDEX.HTML
+
 // PACKING LIST
 var packingListShipDate = $('#packing-list-invoice').children('li')[2];
 var packingListShipMethod = $('#packing-list-invoice').children('li')[3];
@@ -119,6 +122,8 @@ cartonTangoItemNum.innerText = obj[0].tangoItemNum;
 cartonItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
 cartonQuantity.innerText = obj[0].rollLength + " Meters";
 cartonDate.innerText = obj[0].shipDate;
+
+// WE WILL REMOVE THESE CONVERSIONS ONCE WE DECIDE WHICH API TO UTILIZE FOR OUR PDF GENERATION
 
 // CONVERT TO PDF API
 $('#download-packing-list-PDF').click(function () {

@@ -21,7 +21,7 @@ $(document).ready(function () {
         'Quantity in Partial Box:',
         'Vendor/Supplier Name:'
     ];
-    // INPUT CREATION BASED ON VALUE OF NUMBER OF ITEMS
+    // INPUT CREATION BASED ON VALUE OF INPUT 'numOfItems'
     $('.enterData').click(function () {
         event.preventDefault();
         var numItemsInput = $('#numOfItems').val();
