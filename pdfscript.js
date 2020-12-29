@@ -4,7 +4,7 @@ console.log(obj)
 
 // THIS IS WHERE WE MANIPULATE PREVIEW.HTML WITH THE VALUES FROM OUR INPUTS ON INDEX.HTML
 
-// PACKING LIST
+function packingList(){
 var packingListShipDate = $('#packing-list-invoice').children('li')[2];
 var packingListShipMethod = $('#packing-list-invoice').children('li')[3];
 var packingListFOB = $('#packing-list-invoice').children('li')[4];
@@ -45,7 +45,8 @@ packingListBoxCount.innerText = obj[0].numTotalCarton;
 packingListWeight.innerText = 'Weight: ' + obj[0].totalWeight + ' lbs';
 packingListFooterPO.innerText = 'Reference PO# ' + obj[0].custPO;
 
-// INSPECTION REPORT
+};
+function inspectionReport(){
 var qualAssuranceShipDate = $('#qa-date').children('span')[0];
 var qualAssuranceVendor = $('#qa-tangoInfo').children('li')[4];
 var qualAssuranceManuDate = $('#qa-tangoInfo').children('li')[5];
@@ -67,8 +68,8 @@ qualAssurancePO.innerText = 'Customer PO #: ' + obj[0].custPO;
 qualAssuranceDateOrdered.innerText = 'Date Ordered: ' + obj[0].custPODate;
 qualAssuranceDescription.innerText = obj[0].itemDescription;
 qualAssuranceDescriptionSize.innerText = 'Size: ' + obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + ' Meters';
-
-// PALLET LABEL
+};
+function palletLabel(){
 var palletCustomerAddressName = $('#pallet-customer-address').children('li')[0];
 var palletCustomerAddressStreet = $('#pallet-customer-address').children('li')[1];
 var palletCustomerAddressCity = $('#pallet-customer-address').children('li')[2];
@@ -81,7 +82,17 @@ palletCustomerAddressCity.innerText = obj[0].billCity + ', ' + obj[0].billState 
 palletCustomerAddressPhone.innerText = obj[0].billPhoneNum;
 palletCustomerAddressPO.innerText = 'PO #: ' + obj[0].custPO;
 
-// ROLL LABEL
+clonePalletLabel();
+};
+function clonePalletLabel(){
+    let div = document.querySelector('#pallet-label-container');
+    for (var i = 1; i < 2; i++) {
+        const clone = div.cloneNode(true);
+        clone.id = 'pallet-label-container';
+        div.after(clone);
+    }
+};
+function rollLabel(){
 var rollCustomerAddressName = $('#lr-address').children('li')[0];
 var rollCustomerAddressStreet = $('#lr-address').children('li')[1];
 var rollCustomerAddressCity = $('#lr-address').children('li')[2];
@@ -102,7 +113,24 @@ rollItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength + 
 rollQuantity.innerText = obj[0].rollLength + " Meters";
 rollDate.innerText = obj[0].shipDate;
 
-// CARTON LABEL
+cloneRollLabel();
+};
+function cloneRollLabel(){
+    var rollQuantity = $('#lr-quantity').children('td')[1];
+    let div = document.querySelector('#lr-container');
+    for (var i = 1; i < 10; i++) {
+        const clone = div.cloneNode(true);
+        clone.id = 'lr-container';
+        $('#lr-item-roll').text(i + 1);
+        div.after(clone);
+        if (i === (10 - 1) && true === true){
+            rollQuantity.innerText = obj[0].partialRollLength + "TESTING Meters";
+            $('#lr-item-quantity').addClass('red');
+        }
+        
+    }
+}
+function cartonLabel(){
 var cartonCustomerAddressName = $('#lc-address').children('li')[0];
 var cartonCustomerAddressStreet = $('#lc-address').children('li')[1];
 var cartonCustomerAddressCity = $('#lc-address').children('li')[2];
@@ -123,71 +151,98 @@ cartonItemSize.innerText = obj[0].layFlat + 'mm Layflat X ' + obj[0].rollLength 
 cartonQuantity.innerText = obj[0].rollLength + " Meters";
 cartonDate.innerText = obj[0].shipDate;
 
-// WE WILL REMOVE THESE CONVERSIONS ONCE WE DECIDE WHICH API TO UTILIZE FOR OUR PDF GENERATION
+cloneCartonLabel();
+};
+function cloneCartonLabel(){
+    var cartonQuantity = $('#lc-quantity').children('td')[1];
+    let div = document.querySelector('#lc-container');
+    for (var i = 1; i < 10; i++) {
+        const clone = div.cloneNode(true);
+        clone.id = 'lc-container';
+        $('#lc-item-box').text(i + 1);
+        div.after(clone);
+        if (i === (10 - 1) && true === true){
+            cartonQuantity.innerText = obj[0].partialRollLength + "TESTING Meters";
+            $('#lc-item-quantity').addClass('red');
+        }
+        
+    }
+};
+
+
+packingList();
+inspectionReport();
+palletLabel();
+rollLabel();
+cartonLabel();
+
+
+
+
+
+
+
+
 
 // CONVERT TO PDF API
-$('#download-packing-list-PDF').click(function () {
-
-    domtoimage.toPng(document.getElementById('packing-list'))
-    .then(function (blob) {
-
-        var pdf = new jsPDF('l', 'pt', [$('#packing-list').width(), $('#packing-list').height()]);
-        pdf.addImage(blob, 'PNG', 0, 0, $('#packing-list').width(), $('#packing-list').height());
-        pdf.save("test.pdf");
-        that.options.api.optionsChanged();
-    });    
-});
-
-$('#download-qa-PDF').click(function () {
-
-    domtoimage.toPng(document.getElementById('quality-assurance'))
-    .then(function (blob) {
-
-        var pdf = new jsPDF('l', 'pt', [$('#quality-assurance').width(), $('#quality-assurance').height()]);
-        pdf.addImage(blob, 'PNG', 0, 0, $('#quality-assurance').width(), $('#quality-assurance').height());
-        pdf.save("test.pdf");
-        that.options.api.optionsChanged();
+function deleteLater(){
+    $('#download-packing-list-PDF').click(function () {
+    
+        domtoimage.toPng(document.getElementById('packing-list'))
+        .then(function (blob) {
+    
+            var pdf = new jsPDF('l', 'pt', [$('#packing-list').width(), $('#packing-list').height()]);
+            pdf.addImage(blob, 'PNG', 0, 0, $('#packing-list').width(), $('#packing-list').height());
+            pdf.save("test.pdf");
+            that.options.api.optionsChanged();
+        });    
     });
-});
-
-$('#download-lc-PDF').click(function () {
-
-    domtoimage.toPng(document.getElementById('label-carton'))
-    .then(function (blob) {
-
-        var pdf = new jsPDF('l', 'pt', [$('#label-carton').width(), $('#label-carton').height()]);
-        pdf.addImage(blob, 'PNG', 0, 0, $('#label-carton').width(), $('#label-carton').height());
-        pdf.save("test.pdf");
-        that.options.api.optionsChanged();
+    
+    $('#download-qa-PDF').click(function () {
+    
+        domtoimage.toPng(document.getElementById('quality-assurance'))
+        .then(function (blob) {
+    
+            var pdf = new jsPDF('l', 'pt', [$('#quality-assurance').width(), $('#quality-assurance').height()]);
+            pdf.addImage(blob, 'PNG', 0, 0, $('#quality-assurance').width(), $('#quality-assurance').height());
+            pdf.save("test.pdf");
+            that.options.api.optionsChanged();
+        });
     });
-});
-
-$('#download-lr-PDF').click(function () {
-
-    domtoimage.toPng(document.getElementById('label-roll'))
-    .then(function (blob) {
-
-        var pdf = new jsPDF('l', 'pt', [$('#label-roll').width(), $('#label-roll').height()]);
-        pdf.addImage(blob, 'PNG', 0, 0, $('#label-roll').width(), $('#label-roll').height());
-        pdf.save("test.pdf");
-        that.options.api.optionsChanged();
+    
+    $('#download-lc-PDF').click(function () {
+    
+        domtoimage.toPng(document.getElementById('label-carton'))
+        .then(function (blob) {
+    
+            var pdf = new jsPDF('l', 'pt', [$('#label-carton').width(), $('#label-carton').height()]);
+            pdf.addImage(blob, 'PNG', 0, 0, $('#label-carton').width(), $('#label-carton').height());
+            pdf.save("test.pdf");
+            that.options.api.optionsChanged();
+        });
     });
-});
-
-$('#download-pallet-label-PDF').click(function () {
-
-    domtoimage.toPng(document.getElementById('pallet-label'))
-    .then(function (blob) {
-
-        var pdf = new jsPDF('l', 'pt', [$('#pallet-label').width(), $('#pallet-label').height()]);
-        pdf.addImage(blob, 'PNG', 0, 0, $('#pallet-label').width(), $('#pallet-label').height());
-        pdf.save("test.pdf");
-        that.options.api.optionsChanged();
+    
+    $('#download-lr-PDF').click(function () {
+    
+        domtoimage.toPng(document.getElementById('label-roll'))
+        .then(function (blob) {
+    
+            var pdf = new jsPDF('l', 'pt', [$('#label-roll').width(), $('#label-roll').height()]);
+            pdf.addImage(blob, 'PNG', 0, 0, $('#label-roll').width(), $('#label-roll').height());
+            pdf.save("test.pdf");
+            that.options.api.optionsChanged();
+        });
     });
-});
-
-
-
-
-
-
+    
+    $('#download-pallet-label-PDF').click(function () {
+    
+        domtoimage.toPng(document.getElementById('pallet-label'))
+        .then(function (blob) {
+    
+            var pdf = new jsPDF('l', 'pt', [$('#pallet-label').width(), $('#pallet-label').height()]);
+            pdf.addImage(blob, 'PNG', 0, 0, $('#pallet-label').width(), $('#pallet-label').height());
+            pdf.save("test.pdf");
+            that.options.api.optionsChanged();
+        });
+    });
+    }
